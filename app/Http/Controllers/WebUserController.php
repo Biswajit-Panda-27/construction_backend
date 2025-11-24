@@ -13,7 +13,7 @@ class WebUserController extends Controller
         // 1️⃣ Validate input
         $request->validate([
             'email' => 'required|email|unique:webusers,email',
-            'password' => 'required|min:6',
+            'password' => 'required',
         ]);
 
         // 2️⃣ Create user (timestamps handled automatically)
