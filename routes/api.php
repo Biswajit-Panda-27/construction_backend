@@ -10,7 +10,7 @@ Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
 
-Route::post('/register', [WebUserController::class, 'create']);
+Route::post('/signup', [WebUserController::class, 'create']);
 Route::post('/login', [AuthenticationController::class, 'login']);
 
 // Example of protected route
@@ -28,14 +28,8 @@ Route::middleware('auth:sanctum')->group(function () {
 Route::get('/project', [ProjectController::class, 'read']);
 Route::get('/project/{id}', [ProjectController::class, 'readById']);
 
-// {
-//     "contractor_name": "John Doe",
-//     "contractor_number": "1231231231",
-//     "contractor_email": "john@gmail.com",
-//     "contractor_image": "https://images.unsplash.com/photo-1457449940276-e8deed18bfff?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-//     "building_image": "https://images.unsplash.com/photo-1570129477492-45c003edd2be?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-//     "spent_amount": "32cr",
-//     "location": "Hyderabad"
-// }
+// to create: http://localhost:8000/api/project
+// to read: http://localhost:8000/api/project
+// to update: http://localhost:8000/api/project/{id}
+// to delete: http://localhost:8000/api/project/{id}
 
-//      token=    12|F0Z7HF4s2WKc8qz5uzyXlJn4Pku2ExyY6tCH4Rf5cd1fd02b

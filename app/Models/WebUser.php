@@ -13,5 +13,4 @@ class WebUser extends Authenticatable
     protected $table = 'webusers';               // Table name
     protected $fillable = ['email', 'password']; // Fields that can be mass-assigned
     protected $hidden = ['password'];            // Hide password in JSON responses
-
 }

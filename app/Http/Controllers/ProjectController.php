@@ -20,7 +20,7 @@ class ProjectController extends Controller
             'spent_amount' => 'required|string|max:30',
             'location' => 'required|string|max:100',
         ]);
-
+        
         $details = Project::create($data);
 
         return response()->json($details, 201);
